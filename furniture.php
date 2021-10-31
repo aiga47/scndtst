@@ -31,8 +31,9 @@ class Furniture extends ProductType
 HTML;
     }
 
-    public function getArrayToSave($generatedSku){
-      return array(
+    public function getArrayToSave($generatedSku)
+    {
+        return array(
           "sku"     => $generatedSku,
           "name"    => $_POST['name'],
           "price"   => $_POST['price'],

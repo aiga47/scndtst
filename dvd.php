@@ -15,7 +15,7 @@ class DVD extends ProductType
 
     public function getLabel($column)
     {
-      return <<<HTML
+        return <<<HTML
        <div class="grid-item">
         <input type="checkbox" class="delete-checkbox" value="{$column["sku"]}">
         <p>{$column["sku"]}</p>
@@ -24,11 +24,11 @@ class DVD extends ProductType
         <p>Size: {$column["size"]} MB</p>
       </div>
 HTML;
-
     }
 
-    public function getArrayToSave($generatedSku){
-      return array(
+    public function getArrayToSave($generatedSku)
+    {
+        return array(
           "sku"     => $generatedSku,
           "name"    => $_POST['name'],
           "price"   => $_POST['price'],

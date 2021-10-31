@@ -38,8 +38,6 @@
 
 $type_handler = new TypeHandler();
 
-
-
 try {
     require "config.php";
 

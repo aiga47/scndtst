@@ -13,8 +13,6 @@ class Book extends ProductType
       ";
     }
 
-
-
     public function getLabel($column)
     {
         return <<<HTML
@@ -29,8 +27,9 @@ class Book extends ProductType
 HTML;
     }
 
-    public function getArrayToSave($generatedSku){
-      return array(
+    public function getArrayToSave($generatedSku)
+    {
+        return array(
           "sku"     => $generatedSku,
           "name"    => $_POST['name'],
           "price"   => $_POST['price'],

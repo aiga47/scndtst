@@ -2,8 +2,6 @@
 <?php require "dvd.php"; ?>
 <?php require "furniture.php"; ?>
 
-
-
 <?php
 
   $handler = new TypeHandler();
@@ -24,9 +22,9 @@
    }
 
    if (isset($_POST["delete"])) {
-      $array=$_POST['delete'];
-      $handler->deleteBySku($array);
-      echo true;
+       $array=$_POST['delete'];
+       $handler->deleteBySku($array);
+       echo true;
    }
 
    class TypeHandler
@@ -69,18 +67,17 @@
 
        public function deleteBySku($skuArray)
        {
-         require_once "config.php";
+           require_once "config.php";
 
            try {
                $connection = new PDO($dsn, $username, $password, $options);
 
                foreach ($skuArray as $sku) {
-                 $sql = "DELETE FROM products WHERE sku = :sku";
-                 $statement = $connection->prepare($sql);
-                 $statement->bindValue(':sku', $sku);
-                 $statement->execute();
-                }
-
+                   $sql = "DELETE FROM products WHERE sku = :sku";
+                   $statement = $connection->prepare($sql);
+                   $statement->bindValue(':sku', $sku);
+                   $statement->execute();
+               }
            } catch (PDOException $error) {
                print_r($sql . "<br>" . $error->getMessage());
            }

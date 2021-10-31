@@ -1,26 +1,14 @@
-/* to update the stylesheet at your pleased intervals, then use this: Ctrl + F5. */
 label {
-  /* display: inline; */
   margin: 5px 0;
   text-align: left;
   display: block;
-  /* flex: 50%; */
 }
 
-/* input {
-  flex: 50%;
-} */
-/* form {
-  display: flex;
-} */
 ul {
   border: 1px solid black;
   width: 10%;
   text-align: center;
   grid-row: auto;
-}
-
-
 }
 
 td,

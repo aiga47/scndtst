@@ -19,8 +19,6 @@
     	<input type="text" name="name" id="name">
     	<label for="price">Price ($)</label>
     	<input type="number" name="price" id="price">
-      <!-- <label for="productType">Type Switcher</label>
-    	<input type="text" name="productType" id="productType"> -->
 
     Type Switcher
     <select id="productType" name="productType">
@@ -103,6 +101,3 @@ function generateUniqueSku()
 ?>
 
 <?php require "templates/footer.php"; ?>
-
-
-<!-- CTRL+ALT+B   =  formatē kodu lai ir skaists un viegli lasāms -->
